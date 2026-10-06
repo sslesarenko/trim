@@ -1,0 +1,42 @@
+:root {
+  --bg: #12110f;
+  --text: #f6f1e8;
+  --hint: #b7b0a4;
+  --button: #efe2cc;
+  --button-text: #1c1814;
+  --secondary: #1c1a17;
+  color-scheme: dark;
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+#root {
+  display: flex;
+}
+
+button,
+img {
+  font: inherit;
+}
