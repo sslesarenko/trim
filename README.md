@@ -24,9 +24,9 @@ npm run dev
 
 ## GitHub Pages
 
-Push в `main` собирает статику и публикует её на [https://sslesarenko.github.io/trim/](https://sslesarenko.github.io/trim/). Отдельный бэкенд не нужен.
+Push в `main` собирает статику и публикует её на [https://trimstyle.sicloud.ru/](https://trimstyle.sicloud.ru/). Отдельный бэкенд не нужен.
 
-В настройках репозитория источник Pages должен быть GitHub Actions.
+В настройках репозитория источник Pages — GitHub Actions, пользовательский домен — `trimstyle.sicloud.ru`. После сохранения домена включите Enforce HTTPS.
 
 ## Подключение к боту
 
