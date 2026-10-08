@@ -1,4 +1,5 @@
-import { useCallback, useEffect, useRef, useState, type CSSProperties, type PointerEvent } from 'react'
+import { useCallback, useEffect, useRef, useState, type CSSProperties, type MouseEvent, type PointerEvent } from 'react'
+import { isDikidiBooking, openDikidiBooking } from '../booking.ts'
 import { appTitle, type ServiceCard as ServiceCardData } from '../data/services.ts'
 import { openExternal } from '../telegram.ts'
 import { ServiceCard } from './ServiceCard.tsx'
@@ -111,14 +112,26 @@ export function CardDeck({ services }: CardDeckProps) {
     const service = services[index]
     if (!service) return
     suppressClick.current = true
-    openExternal(service.bookingUrl)
+    openBooking(service.bookingUrl)
   }
 
-  function book(service: ServiceCardData) {
-    if (suppressClick.current) {
-      suppressClick.current = false
+  function openBooking(url: string) {
+    if (isDikidiBooking(url)) {
+      openDikidiBooking(url)
       return
     }
+    openExternal(url)
+  }
+
+  function book(service: ServiceCardData, event: MouseEvent<HTMLElement>) {
+    if (suppressClick.current) {
+      suppressClick.current = false
+      event.preventDefault()
+      event.stopPropagation()
+      return
+    }
+    if (isDikidiBooking(service.bookingUrl)) return
+    event.preventDefault()
     openExternal(service.bookingUrl)
   }
 
@@ -172,21 +185,16 @@ export function CardDeck({ services }: CardDeckProps) {
                 >
                   <ServiceCard
                     service={service}
-                    onBook={isTop ? () => book(service) : () => undefined}
+                    onBook={isTop ? (event) => book(service, event) : () => undefined}
                   />
                 </div>
               )
             })}
           </div>
 
-          <button
-            type="button"
-            className="site-button"
-            data-testid="site"
-            onClick={() => openExternal(current.siteUrl)}
-          >
-            На сайт
-          </button>
+          <a className="site-button" data-testid="call" href={`tel:${current.phone}`}>
+            Позвонить
+          </a>
 
           <div className="nav">
             <button type="button" data-testid="prev" onClick={goBack} disabled={index === 0 || leaving !== null}>

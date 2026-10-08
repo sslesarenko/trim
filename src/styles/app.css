@@ -101,6 +101,7 @@
   background: transparent;
   color: #fff;
   text-align: left;
+  text-decoration: none;
   cursor: inherit;
   user-select: none;
 }
@@ -166,7 +167,11 @@
 }
 
 .site-button {
+  display: flex;
   flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }
 
 .nav {

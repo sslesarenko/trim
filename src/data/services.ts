@@ -1,4 +1,4 @@
-export const appTitle = 'Trimstyle'
+export const appTitle = 'ТримСтайл'
 
 export type ServiceCard = {
   id: string
@@ -6,10 +6,10 @@ export type ServiceCard = {
   description: string
   image: string
   bookingUrl: string
-  siteUrl: string
+  phone: string
 }
 
-const siteUrl = 'https://example.com'
+const phone = '+375447924404'
 const placeholder = (name: string) => `${import.meta.env.BASE_URL}placeholders/${name}.jpg`
 
 export const services: ServiceCard[] = [
@@ -19,7 +19,7 @@ export const services: ServiceCard[] = [
     description: 'Форма, которая держится между визитами.',
     image: placeholder('haircut'),
     bookingUrl: 'https://dikidi.ru/#widget=219770',
-    siteUrl,
+    phone,
   },
   {
     id: 'color',
@@ -27,7 +27,7 @@ export const services: ServiceCard[] = [
     description: 'Оттенок под тон кожи и привычный уход.',
     image: placeholder('color'),
     bookingUrl: 'https://example.com/booking/color',
-    siteUrl,
+    phone,
   },
   {
     id: 'contouring',
@@ -35,7 +35,7 @@ export const services: ServiceCard[] = [
     description: 'Линия скул и мягкий объём.',
     image: placeholder('conturing'),
     bookingUrl: 'https://example.com/booking/contouring',
-    siteUrl,
+    phone,
   },
   {
     id: 'manicure',
@@ -43,7 +43,7 @@ export const services: ServiceCard[] = [
     description: 'Форма и покрытие ногтей.',
     image: placeholder('man'),
     bookingUrl: 'https://example.com/booking/manicure',
-    siteUrl,
+    phone,
   },
   {
     id: 'makeup',
@@ -51,7 +51,7 @@ export const services: ServiceCard[] = [
     description: 'Глаза, тон и акценты на выход.',
     image: placeholder('mak'),
     bookingUrl: 'https://example.com/booking/makeup',
-    siteUrl,
+    phone,
   },
   {
     id: 'complex',
@@ -59,6 +59,6 @@ export const services: ServiceCard[] = [
     description: 'Стрижка и уход за один визит.',
     image: placeholder('complex'),
     bookingUrl: 'https://example.com/booking/complex',
-    siteUrl,
+    phone,
   },
 ]
