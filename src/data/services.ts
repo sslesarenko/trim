@@ -10,14 +10,14 @@ export type ServiceCard = {
 }
 
 const siteUrl = 'https://example.com'
-const placeholder = (name: string) => `${import.meta.env.BASE_URL}placeholders/${name}.png`
+const placeholder = (name: string) => `${import.meta.env.BASE_URL}placeholders/${name}.jpg`
 
 export const services: ServiceCard[] = [
   {
     id: 'haircut',
     title: 'Стрижка',
     description: 'Форма, которая держится между визитами.',
-    image: placeholder('trim'),
+    image: placeholder('haircut'),
     bookingUrl: 'https://example.com/booking/haircut',
     siteUrl,
   },
