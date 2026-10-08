@@ -199,7 +199,6 @@ export function CardDeck({ services }: CardDeckProps) {
         </>
       ) : (
         <section className="empty" data-testid="empty">
-          <p>Это все услуги</p>
           <button type="button" data-testid="restart" onClick={restart}>
             Сначала
           </button>

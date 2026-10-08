@@ -1,4 +1,4 @@
-export const appTitle = 'Trim'
+export const appTitle = 'Trimstyle'
 
 export type ServiceCard = {
   id: string
@@ -18,7 +18,7 @@ export const services: ServiceCard[] = [
     title: 'Стрижка',
     description: 'Форма, которая держится между визитами.',
     image: placeholder('haircut'),
-    bookingUrl: 'https://example.com/booking/haircut',
+    bookingUrl: 'https://dikidi.ru/#widget=219770',
     siteUrl,
   },
   {
