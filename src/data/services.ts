@@ -10,14 +10,14 @@ export type ServiceCard = {
 }
 
 const siteUrl = 'https://example.com'
-const placeholder = (name: string) => `${import.meta.env.BASE_URL}placeholders/${name}.svg`
+const placeholder = (name: string) => `${import.meta.env.BASE_URL}placeholders/${name}.png`
 
 export const services: ServiceCard[] = [
   {
     id: 'haircut',
     title: 'Стрижка',
     description: 'Форма, которая держится между визитами.',
-    image: placeholder('haircut'),
+    image: placeholder('trim'),
     bookingUrl: 'https://example.com/booking/haircut',
     siteUrl,
   },
@@ -30,27 +30,27 @@ export const services: ServiceCard[] = [
     siteUrl,
   },
   {
-    id: 'styling',
-    title: 'Укладка',
-    description: 'Объём и линия на выход или на каждый день.',
-    image: placeholder('styling'),
-    bookingUrl: 'https://example.com/booking/styling',
+    id: 'contouring',
+    title: 'Контуринг',
+    description: 'Линия скул и мягкий объём.',
+    image: placeholder('conturing'),
+    bookingUrl: 'https://example.com/booking/contouring',
     siteUrl,
   },
   {
-    id: 'beard',
-    title: 'Борода',
-    description: 'Контур, длина и уход за кожей.',
-    image: placeholder('beard'),
-    bookingUrl: 'https://example.com/booking/beard',
+    id: 'manicure',
+    title: 'Маникюр',
+    description: 'Форма и покрытие ногтей.',
+    image: placeholder('man'),
+    bookingUrl: 'https://example.com/booking/manicure',
     siteUrl,
   },
   {
-    id: 'care',
-    title: 'Уход',
-    description: 'Восстановление после окрашивания и сушки.',
-    image: placeholder('care'),
-    bookingUrl: 'https://example.com/booking/care',
+    id: 'makeup',
+    title: 'Макияж',
+    description: 'Глаза, тон и акценты на выход.',
+    image: placeholder('mak'),
+    bookingUrl: 'https://example.com/booking/makeup',
     siteUrl,
   },
   {
