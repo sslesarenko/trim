@@ -18,7 +18,7 @@ export const services: ServiceCard[] = [
     title: 'Стрижка',
     description: 'Форма, которая держится между визитами.',
     image: placeholder('haircut'),
-    bookingUrl: 'https://dikidi.ru/#widget=219784',
+    bookingUrl: 'https://dikidi.ru/#widget=219378',
     phone,
   },
   {
@@ -26,7 +26,7 @@ export const services: ServiceCard[] = [
     title: 'Окрашивание',
     description: 'Оттенок под тон кожи и привычный уход.',
     image: placeholder('color'),
-    bookingUrl: 'https://dikidi.ru/#widget=219790',
+    bookingUrl: 'https://dikidi.ru/#widget=219378',
     phone,
   },
   {
@@ -34,7 +34,7 @@ export const services: ServiceCard[] = [
     title: 'Контуринг',
     description: 'Линия скул и мягкий объём.',
     image: placeholder('conturing'),
-    bookingUrl: 'https://dikidi.ru/#widget=219789',
+    bookingUrl: 'https://dikidi.ru/#widget=219378',
     phone,
   },
   {
@@ -42,7 +42,7 @@ export const services: ServiceCard[] = [
     title: 'Маникюр',
     description: 'Форма и покрытие ногтей.',
     image: placeholder('man'),
-    bookingUrl: 'https://dikidi.ru/#widget=219785',
+    bookingUrl: 'https://dikidi.ru/#widget=219378',
     phone,
   },
   {
@@ -50,7 +50,7 @@ export const services: ServiceCard[] = [
     title: 'Макияж',
     description: 'Глаза, тон и акценты на выход.',
     image: placeholder('mak'),
-    bookingUrl: 'https://dikidi.ru/#widget=219786',
+    bookingUrl: 'https://dikidi.ru/#widget=219378',
     phone,
   },
   {
@@ -58,7 +58,7 @@ export const services: ServiceCard[] = [
     title: 'Комплекс',
     description: 'Стрижка и уход за один визит.',
     image: placeholder('complex'),
-    bookingUrl: 'https://dikidi.ru/#widget=219787',
+    bookingUrl: 'https://dikidi.ru/#widget=219378',
     phone,
   },
 ]
