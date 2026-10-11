@@ -75,3 +75,12 @@ export function openExternal(url: string): void {
 
   window.open(url, '_blank', 'noopener,noreferrer')
 }
+
+export function callPhone(phone: string, event: { preventDefault(): void }): void {
+  const app = getWebApp()
+  if (!app || !isInsideTelegram(app)) return
+
+  // Обычная ссылка tel: внутри Mini App не доходит до системы. window.open из клика открывает набор без промежуточной страницы.
+  event.preventDefault()
+  window.open(`tel:${phone}`)
+}

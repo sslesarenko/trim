@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState, type CSSProperties, type MouseEvent, type PointerEvent } from 'react'
 import { isDikidiBooking, openDikidiBooking } from '../booking.ts'
 import { appTitle, type ServiceCard as ServiceCardData } from '../data/services.ts'
-import { openExternal } from '../telegram.ts'
+import { callPhone, openExternal } from '../telegram.ts'
 import { ServiceCard } from './ServiceCard.tsx'
 
 const SWIPE_THRESHOLD = 110
@@ -192,7 +192,12 @@ export function CardDeck({ services }: CardDeckProps) {
             })}
           </div>
 
-          <a className="site-button" data-testid="call" href={`tel:${current.phone}`}>
+          <a
+            className="site-button"
+            data-testid="call"
+            href={`tel:${current.phone}`}
+            onClick={(event) => callPhone(current.phone, event)}
+          >
             Позвонить
           </a>
 
